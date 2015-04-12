@@ -1,0 +1,6 @@
+<ul>
+
+<% @res.each do |row| %>
+ <li><%=  link_to SimpleHashtag::Hashtag.find(row["hashtag_id"]).name, hashtag_path(SimpleHashtag::Hashtag.find(row["hashtag_id"]).name) %>(<%=row["count"]%>)</li> <% end -%>
+ 
+</ul>
